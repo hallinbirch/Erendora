@@ -34,7 +34,7 @@ Public Class Form1
     ' Progressbar '
     Private Sub downloader_DownloadProgressChanged(ByVal sender As Object, ByVal e As System.Net.DownloadProgressChangedEventArgs) Handles downloader.DownloadProgressChanged
         PictureBox9.Width = 544
-        Me.PictureBox9.Width = e.ProgressPercentage
+        Me.PictureBox9.Width = e.ProgressPercentage * 5.44
         Me.Label2.Text = Format((e.BytesReceived / 10 ^ 9), "0.000") & " von " & Format((e.TotalBytesToReceive / 10 ^ 9), "0.00") & "GB"
         Me.Label3.Text = e.ProgressPercentage & "%"
     End Sub
