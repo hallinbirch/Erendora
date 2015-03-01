@@ -31,7 +31,7 @@ Public Class Form1
         Me.PictureBox1.Enabled = True
     End Sub
 
-    ' Progressbar '
+    ' Progressbar Test '
     Private Sub downloader_DownloadProgressChanged(ByVal sender As Object, ByVal e As System.Net.DownloadProgressChangedEventArgs) Handles downloader.DownloadProgressChanged
         PictureBox9.Width = 544
         Me.PictureBox9.Width = e.ProgressPercentage * 5.44
@@ -140,6 +140,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PictureBox9.Width = 0
     End Sub
+
 End Class
 
 
