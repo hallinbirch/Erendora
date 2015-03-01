@@ -1,6 +1,8 @@
 ﻿Imports ErendoraDownloader.Form1
 Imports Ionic.Zip
 Imports System.Net
+Imports System.IO
+Imports System.IO.Compression
 
 Public Class Installer
     Dim Zip As String
@@ -44,14 +46,18 @@ Public Class Installer
             TextBox1.Visible = False
             PictureBox6.Visible = False
 
-            Zip = Form1.TextBox1.Text
+            'Zip = Form1.TextBox1.Text
+            Dim pathOfErendoraZIP As String = Form1.TextBox1.Text
 
-            Using Zip As ZipFile = ZipFile.Read(TextBox1.Text)
-                AddHandler Zip.ExtractProgress, AddressOf MyextractProgress
 
-                Dim Entry As ZipEntry
-                For Each Entry In Zip
-                    Entry.Extract(TextBox1.Text, ExtractExistingFileAction.OverwriteSilently)
+
+
+            Using zip As ZipFile = ZipFile.Read(pathOfErendoraZIP)
+                AddHandler zip.ExtractProgress, AddressOf MyextractProgress
+
+                Dim entry As ZipEntry
+                For Each entry In zip
+                    entry.Extract(TextBox1.Text, ExtractExistingFileAction.OverwriteSilently)
                 Next
             End Using
 

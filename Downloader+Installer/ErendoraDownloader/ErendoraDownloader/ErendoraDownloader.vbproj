@@ -68,10 +68,10 @@
     <ApplicationIcon>flyff_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>A0548AE2066FFC0C792FCC81814F738FEC29CAB7</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>C4570BA70255A7BB8725BD7F9E0B32C9F727041A</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>ErendoraDownloader_2_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>ErendoraDownloader_3_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -210,8 +210,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ErendoraDownloader_1_TemporaryKey.pfx" />
+    <None Include="ErendoraDownloader_1_TemporaryKey.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ErendoraDownloader_2_TemporaryKey.pfx" />
+    <None Include="ErendoraDownloader_3_TemporaryKey.pfx" />
     <None Include="ErendoraDownloader_TemporaryKey.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
