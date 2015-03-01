@@ -111,10 +111,7 @@ Public Class Installer
         ' Progressbar Größe '
         PictureBox8.Width = 544
         ' Progressbar soll Fortschritt anzeigen '
-        If e.BytesTransferred > 0 AndAlso e.TotalBytesToTransfer > 0 Then
-            ' Me.Invoke(Sub() PictureBox8.Width = CInt(e.BytesTransferred * 100 \ e.TotalBytesToTransfer)) '
-            Me.PictureBox8.Width = e.BytesTransferred * 100 \ e.TotalBytesToTransfer
-        End If
+        PictureBox8.Width = e.BytesTransferred \ e.TotalBytesToTransfer * 5.44
     End Sub
 
     ' Close Button Oben Hover '
