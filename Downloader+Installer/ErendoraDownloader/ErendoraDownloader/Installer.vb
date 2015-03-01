@@ -77,6 +77,20 @@ Public Class Installer
         End If
     End Sub
 
+    Private Sub MyextractProgress(ByVal sender As Object, ByVal e As ExtractProgressEventArgs)
+        ' Progressbar Größe '
+        PictureBox8.Width = 544
+        ' Progressbar soll Fortschritt anzeigen '
+        If e.BytesTransferred <> 0 Then
+            Label3.Text = (e.BytesTransferred * 100) \ e.TotalBytesToTransfer
+            'PictureBox8.Width = e.BytesTransferred \ e.TotalBytesToTransfer * 5.44
+            PictureBox8.Width = ((e.BytesTransferred * 100) \ e.TotalBytesToTransfer) * 5.44
+        Else
+            PictureBox8.Width = e.BytesTransferred
+        End If
+
+    End Sub
+
     ' Back Button Hover '
     Private Sub PictureBox5_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox5.MouseHover
         PictureBox5.BackgroundImage = My.Resources.DownloadButtonBackHover
@@ -105,13 +119,6 @@ Public Class Installer
         Dim Speichern = New FolderBrowserDialog
         Speichern.ShowDialog()
         Me.TextBox1.Text = Speichern.SelectedPath & "\Erendora\"
-    End Sub
-
-    Private Sub MyextractProgress(ByVal sender As Object, ByVal e As ExtractProgressEventArgs)
-        ' Progressbar Größe '
-        PictureBox8.Width = 544
-        ' Progressbar soll Fortschritt anzeigen '
-        PictureBox8.Width = e.BytesTransferred \ e.TotalBytesToTransfer * 5.44
     End Sub
 
     ' Close Button Oben Hover '
