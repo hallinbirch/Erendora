@@ -22,12 +22,16 @@
     End Sub
 
     Private Sub PictureBox3_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.MouseHover
-        PictureBox3.BackgroundImage = My.Resources.DownloaderCloseHover
+        PictureBox3.BackgroundImage = My.Resources.DownloadButtonCreditsHover
     End Sub
 
     ' Hover entfernen '
     Private Sub PictureBox3_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.MouseLeave
-        PictureBox3.BackgroundImage = My.Resources.DownloaderClose
+        PictureBox3.BackgroundImage = My.Resources.DownloadButtonCredits
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Form7.Show()
     End Sub
 
 End Class

@@ -113,6 +113,26 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property DownloadButtonCredits() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("DownloadButtonCredits", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property DownloadButtonCreditsHover() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("DownloadButtonCreditsHover", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property DownloadButtonHome() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("DownloadButtonHome", resourceCulture)

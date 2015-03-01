@@ -28,8 +28,10 @@ Partial Class Form3
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox3
@@ -57,7 +59,7 @@ Partial Class Form3
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadCreditsImage
-        Me.PictureBox1.Location = New System.Drawing.Point(16, 49)
+        Me.PictureBox1.Location = New System.Drawing.Point(16, 39)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(407, 136)
         Me.PictureBox1.TabIndex = 16
@@ -68,7 +70,7 @@ Partial Class Form3
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label1.Location = New System.Drawing.Point(360, 188)
+        Me.Label1.Location = New System.Drawing.Point(360, 178)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 17
@@ -79,11 +81,20 @@ Partial Class Form3
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label2.Location = New System.Drawing.Point(15, 188)
+        Me.Label2.Location = New System.Drawing.Point(16, 178)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(99, 13)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Coded for Erendora"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadButtonCredits
+        Me.PictureBox2.Location = New System.Drawing.Point(180, 181)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(82, 26)
+        Me.PictureBox2.TabIndex = 19
+        Me.PictureBox2.TabStop = False
         '
         'Form3
         '
@@ -91,6 +102,7 @@ Partial Class Form3
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadCredits
         Me.ClientSize = New System.Drawing.Size(442, 224)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
@@ -103,6 +115,7 @@ Partial Class Form3
         Me.Text = "Erendora - Downloader"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -112,4 +125,5 @@ Partial Class Form3
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
 End Class

@@ -27,19 +27,23 @@ Partial Class Installer
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.InstallText = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -89,14 +93,6 @@ Partial Class Installer
         Me.PictureBox4.TabIndex = 15
         Me.PictureBox4.TabStop = False
         '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(12, 261)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(553, 23)
-        Me.ProgressBar1.TabIndex = 16
-        Me.ProgressBar1.Visible = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -113,7 +109,7 @@ Partial Class Installer
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(12, 287)
+        Me.Label3.Location = New System.Drawing.Point(538, 287)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(21, 13)
         Me.Label3.TabIndex = 18
@@ -139,6 +135,7 @@ Partial Class Installer
         Me.TextBox1.Size = New System.Drawing.Size(215, 20)
         Me.TextBox1.TabIndex = 19
         Me.TextBox1.Text = "Please select a directory for installation!"
+        Me.TextBox1.Visible = False
         '
         'PictureBox6
         '
@@ -149,6 +146,40 @@ Partial Class Installer
         Me.PictureBox6.Size = New System.Drawing.Size(83, 20)
         Me.PictureBox6.TabIndex = 20
         Me.PictureBox6.TabStop = False
+        Me.PictureBox6.Visible = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox7.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadProgessbar
+        Me.PictureBox7.Location = New System.Drawing.Point(15, 261)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(544, 23)
+        Me.PictureBox7.TabIndex = 21
+        Me.PictureBox7.TabStop = False
+        Me.PictureBox7.Visible = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox8.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadProgressHover
+        Me.PictureBox8.Location = New System.Drawing.Point(15, 261)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(544, 23)
+        Me.PictureBox8.TabIndex = 21
+        Me.PictureBox8.TabStop = False
+        Me.PictureBox8.Visible = False
+        '
+        'InstallText
+        '
+        Me.InstallText.AutoSize = True
+        Me.InstallText.BackColor = System.Drawing.Color.Transparent
+        Me.InstallText.Location = New System.Drawing.Point(15, 287)
+        Me.InstallText.Name = "InstallText"
+        Me.InstallText.Size = New System.Drawing.Size(51, 13)
+        Me.InstallText.TabIndex = 22
+        Me.InstallText.Text = "Installtext"
+        Me.InstallText.Visible = False
         '
         'Installer
         '
@@ -156,11 +187,13 @@ Partial Class Installer
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadInstaller
         Me.ClientSize = New System.Drawing.Size(576, 346)
+        Me.Controls.Add(Me.InstallText)
+        Me.Controls.Add(Me.PictureBox8)
+        Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
@@ -178,6 +211,8 @@ Partial Class Installer
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -187,11 +222,13 @@ Partial Class Installer
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
-    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
+    Friend WithEvents InstallText As System.Windows.Forms.Label
 End Class

@@ -68,10 +68,10 @@
     <ApplicationIcon>flyff_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>C4570BA70255A7BB8725BD7F9E0B32C9F727041A</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>9A5905634D92448B636BA22574404966A0EBD5F5</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>ErendoraDownloader_3_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>ErendoraDownloader_4_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -154,6 +154,19 @@
     <Compile Include="Form6.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form7.Designer.vb">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.vb">
+      <DependentUpon>Form8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Func.vb" />
     <Compile Include="Installer.Designer.vb">
       <DependentUpon>Installer.vb</DependentUpon>
     </Compile>
@@ -166,6 +179,7 @@
     <Compile Include="Installer2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -199,6 +213,12 @@
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Installer.resx">
       <DependentUpon>Installer.vb</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +235,7 @@
     </None>
     <None Include="ErendoraDownloader_2_TemporaryKey.pfx" />
     <None Include="ErendoraDownloader_3_TemporaryKey.pfx" />
+    <None Include="ErendoraDownloader_4_TemporaryKey.pfx" />
     <None Include="ErendoraDownloader_TemporaryKey.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -258,6 +279,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="flyff_icon.ico" />
+    <None Include="Resources\DownloadButtonCredits.png" />
+    <None Include="Resources\DownloadButtonCreditsHover.png" />
     <None Include="Resources\DownloadProgressHover.png" />
     <None Include="Resources\DownloadProgessbar.png" />
     <None Include="Resources\DownloadCreditsImage.png" />

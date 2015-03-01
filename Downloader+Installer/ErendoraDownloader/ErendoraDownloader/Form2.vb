@@ -5,7 +5,7 @@
         Close()
     End Sub
 
-    ' Beweglichkeit X Y Z '
+    ' Beweglichkeit des Fensters '
     Dim Shadow As Point
     Dim DragPosition As Point
     Public Sub Form2_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
@@ -28,7 +28,7 @@
         PictureBox1.BackgroundImage = My.Resources.DownloadButtonOkHover
     End Sub
 
-    ' Hover entfernen '
+    ' Ok Button Hover entfernen '
     Private Sub PictureBox1_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.MouseLeave
         PictureBox1.BackgroundImage = My.Resources.DownloadButtonOk
     End Sub
@@ -43,7 +43,7 @@
         PictureBox3.BackgroundImage = My.Resources.DownloaderCloseHover
     End Sub
 
-    ' Hover entfernen '
+    ' Close Button Hover entfernen '
     Private Sub PictureBox3_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.MouseLeave
         PictureBox3.BackgroundImage = My.Resources.DownloaderClose
     End Sub

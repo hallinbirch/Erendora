@@ -285,34 +285,34 @@
   <data name="&gt;&gt;PictureBox4.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="DownloaderTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="DownloaderTitle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 8.25pt</value>
   </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="DownloaderTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 9</value>
   </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="DownloaderTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 14</value>
   </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="DownloaderTitle.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="Label1.Text" xml:space="preserve">
+  <data name="DownloaderTitle.Text" xml:space="preserve">
     <value>Erendora - Downloader</value>
   </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
+  <data name="&gt;&gt;DownloaderTitle.Name" xml:space="preserve">
+    <value>DownloaderTitle</value>
   </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;DownloaderTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DownloaderTitle.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DownloaderTitle.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="PictureBox5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -208,4 +208,10 @@
   <data name="DownloadProgressHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DownloadProgressHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DownloadButtonCredits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DownloadButtonCredits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DownloadButtonCreditsHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DownloadButtonCreditsHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

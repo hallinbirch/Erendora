@@ -31,7 +31,7 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DownloaderTitle = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
@@ -99,12 +99,12 @@ Partial Class Form1
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.TabStop = False
         '
-        'Label1
+        'DownloaderTitle
         '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label1.Name = "Label1"
+        resources.ApplyResources(Me.DownloaderTitle, "DownloaderTitle")
+        Me.DownloaderTitle.BackColor = System.Drawing.Color.Transparent
+        Me.DownloaderTitle.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DownloaderTitle.Name = "DownloaderTitle"
         '
         'PictureBox5
         '
@@ -152,7 +152,7 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox5)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.DownloaderTitle)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label3)
@@ -182,7 +182,7 @@ Partial Class Form1
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents DownloaderTitle As System.Windows.Forms.Label
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
