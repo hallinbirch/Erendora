@@ -163,7 +163,7 @@ Partial Class Installer
         '
         Me.PictureBox8.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox8.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadProgressHover
-        Me.PictureBox8.Location = New System.Drawing.Point(15, 261)
+        Me.PictureBox8.Location = New System.Drawing.Point(15, 233)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(544, 23)
         Me.PictureBox8.TabIndex = 21

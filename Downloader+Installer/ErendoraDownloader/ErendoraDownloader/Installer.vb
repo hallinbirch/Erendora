@@ -48,7 +48,7 @@ Public Class Installer
         If Me.TextBox1.Text <> "Please select a directory for installation!" Then
             ' Picture Box einblenden '
             PictureBox7.Visible = True
-            PictureBox8.Visible = True
+            PictureBox8.Width = 0
             ' Istall Text einblenden '
             InstallText.Visible = True
             Label1.Visible = True
@@ -57,7 +57,7 @@ Public Class Installer
             TextBox1.Visible = False
             PictureBox6.Visible = False
 
-            ' Sucht die den Speicherort uas Form1 (Downloader) '
+            ' Sucht die den Speicherort aus Form1 (Downloader) '
             Dim pathOfErendoraZIP As String = Form1.TextBox1.Text
 
 
