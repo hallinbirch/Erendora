@@ -2,11 +2,11 @@
 Imports ErendoraDownloader.Form1
 Imports Ionic.Zip
 Imports System.Net
-Imports System.IO
-Imports System.IO.Compression
+Imports SevenZip
 
 Public Class Installer
     ' Deklaationen die benötigt werden ' 
+    Public WithEvents zipper As SevenZip.SevenZipExtractor
     Dim Zip As String
     Dim Ordner As String
 
@@ -48,46 +48,40 @@ Public Class Installer
         If Me.TextBox1.Text <> "Please select a directory for installation!" Then
             ' Picture Box einblenden '
             PictureBox7.Visible = True
-            PictureBox8.Width = 0
             ' Istall Text einblenden '
             InstallText.Visible = True
             Label1.Visible = True
             Label3.Visible = True
             ' Browse Button und Text Box ausblenden '
-            TextBox1.Visible = False
-            PictureBox6.Visible = False
+            TextBox1.Visible = True
+            PictureBox6.Visible = True
 
             ' Sucht die den Speicherort aus Form1 (Downloader) '
             Dim pathOfErendoraZIP As String = Form1.TextBox1.Text
 
-
-
-            ' Entpackt die Zip oder 7z Datei '
-            Using zip As ZipFile = ZipFile.Read(pathOfErendoraZIP)
-                AddHandler zip.ExtractProgress, AddressOf MyextractProgress
-
-                Dim entry As ZipEntry
-                For Each entry In zip
-                    entry.Extract(TextBox1.Text, ExtractExistingFileAction.OverwriteSilently)
-                Next
-            End Using
+            SevenZipExtractor.SetLibraryPath("D:\Erendora\Erendora\Downloader+Installer\ErendoraDownloader\ErendoraDownloader\bin\Debug\7z.dll")
+            Dim sZe As SevenZipExtractor = New SevenZipExtractor(pathOfErendoraZIP)
+            AddHandler sZe.Extracting, AddressOf zipper_zipProgressChange
+            sZe.ExtractArchive(TextBox1.Text)
             ' Wenn Textbox leer ist oder "Please select a directory for installation!" Zeigt fehler '
         Else
             Form2.Show()
         End If
+
+        If PictureBox8.Width = 544 Then
+            PictureBox4.Visible = False
+            PictureBox5.Visible = False
+        End If
     End Sub
 
-    Private Sub MyextractProgress(ByVal sender As Object, ByVal e As ExtractProgressEventArgs)
-        ' Progressbar Größe '
+    Private Sub zipper_zipProgressChange(ByVal sender As Object, ByVal e As SevenZip.ProgressEventArgs) Handles zipper.Extracting
+
         PictureBox8.Width = 544
-        ' Progressbar soll Fortschritt anzeigen '
-        If e.BytesTransferred <> 0 Then
-            Label3.Text = (e.BytesTransferred * 100) \ e.TotalBytesToTransfer
-            'PictureBox8.Width = e.BytesTransferred \ e.TotalBytesToTransfer * 5.44
-            PictureBox8.Width = ((e.BytesTransferred * 100) \ e.TotalBytesToTransfer) * 5.44
-        Else
-            PictureBox8.Width = e.BytesTransferred
-        End If
+        Me.PictureBox8.Width = e.PercentDone * 5.44
+        PictureBox8.Update()
+        Console.WriteLine(e.PercentDone * 5.44)
+        Me.Label3.Text = e.PercentDone & "%"
+
 
     End Sub
 
@@ -164,6 +158,7 @@ Public Class Installer
     Private Sub Installer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Textbox + Browse Button anzeigen lassen '
         PictureBox6.Visible = True
+        PictureBox8.Width = 0
         TextBox1.Visible = True
         ' Form 5 Schließen, da sie nicht mehr benötigt wird '
         Form5.Close()

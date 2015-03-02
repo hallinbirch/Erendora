@@ -109,7 +109,7 @@ Partial Class Installer
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(538, 287)
+        Me.Label3.Location = New System.Drawing.Point(542, 275)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(21, 13)
         Me.Label3.TabIndex = 18
@@ -152,7 +152,7 @@ Partial Class Installer
         '
         Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox7.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadProgessbar
-        Me.PictureBox7.Location = New System.Drawing.Point(15, 261)
+        Me.PictureBox7.Location = New System.Drawing.Point(20, 249)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(544, 23)
         Me.PictureBox7.TabIndex = 21
@@ -163,18 +163,17 @@ Partial Class Installer
         '
         Me.PictureBox8.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox8.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadProgressHover
-        Me.PictureBox8.Location = New System.Drawing.Point(15, 233)
+        Me.PictureBox8.Location = New System.Drawing.Point(21, 249)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(544, 23)
         Me.PictureBox8.TabIndex = 21
         Me.PictureBox8.TabStop = False
-        Me.PictureBox8.Visible = False
         '
         'InstallText
         '
         Me.InstallText.AutoSize = True
         Me.InstallText.BackColor = System.Drawing.Color.Transparent
-        Me.InstallText.Location = New System.Drawing.Point(15, 287)
+        Me.InstallText.Location = New System.Drawing.Point(37, 275)
         Me.InstallText.Name = "InstallText"
         Me.InstallText.Size = New System.Drawing.Size(51, 13)
         Me.InstallText.TabIndex = 22
