@@ -13,6 +13,7 @@ Public Class Installer
     ' Close Button untem im Fenster '
     Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.Click
         Close()
+        Form1.Close()
     End Sub
 
     ' Close Button oben im Fenster '
@@ -71,6 +72,8 @@ Public Class Installer
         If PictureBox8.Width = 544 Then
             PictureBox4.Visible = False
             PictureBox5.Visible = False
+            PictureBox6.Enabled = False
+            TextBox1.Enabled = False
         End If
     End Sub
 
@@ -81,7 +84,7 @@ Public Class Installer
         PictureBox8.Update()
         Console.WriteLine(e.PercentDone * 5.44)
         Me.Label3.Text = e.PercentDone & "%"
-
+        Label3.Update()
 
     End Sub
 
@@ -158,7 +161,10 @@ Public Class Installer
     Private Sub Installer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Textbox + Browse Button anzeigen lassen '
         PictureBox6.Visible = True
+        PictureBox7.Width = 0
         PictureBox8.Width = 0
+        Label3.Visible = False
+        InstallText.Visible = False
         TextBox1.Visible = True
         ' Form 5 Schließen, da sie nicht mehr benötigt wird '
         Form5.Close()

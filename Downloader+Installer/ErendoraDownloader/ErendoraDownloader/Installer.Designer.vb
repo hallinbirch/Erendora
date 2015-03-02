@@ -114,7 +114,6 @@ Partial Class Installer
         Me.Label3.Size = New System.Drawing.Size(21, 13)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "0%"
-        Me.Label3.Visible = False
         '
         'PictureBox5
         '
@@ -157,7 +156,6 @@ Partial Class Installer
         Me.PictureBox7.Size = New System.Drawing.Size(544, 23)
         Me.PictureBox7.TabIndex = 21
         Me.PictureBox7.TabStop = False
-        Me.PictureBox7.Visible = False
         '
         'PictureBox8
         '
@@ -173,12 +171,11 @@ Partial Class Installer
         '
         Me.InstallText.AutoSize = True
         Me.InstallText.BackColor = System.Drawing.Color.Transparent
-        Me.InstallText.Location = New System.Drawing.Point(37, 275)
+        Me.InstallText.Location = New System.Drawing.Point(27, 275)
         Me.InstallText.Name = "InstallText"
         Me.InstallText.Size = New System.Drawing.Size(51, 13)
         Me.InstallText.TabIndex = 22
         Me.InstallText.Text = "Installtext"
-        Me.InstallText.Visible = False
         '
         'Installer
         '
