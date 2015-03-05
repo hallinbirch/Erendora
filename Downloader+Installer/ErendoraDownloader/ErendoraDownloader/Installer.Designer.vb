@@ -35,7 +35,6 @@ Partial Class Installer
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.InstallText = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -167,23 +166,12 @@ Partial Class Installer
         Me.PictureBox8.TabIndex = 21
         Me.PictureBox8.TabStop = False
         '
-        'InstallText
-        '
-        Me.InstallText.AutoSize = True
-        Me.InstallText.BackColor = System.Drawing.Color.Transparent
-        Me.InstallText.Location = New System.Drawing.Point(27, 275)
-        Me.InstallText.Name = "InstallText"
-        Me.InstallText.Size = New System.Drawing.Size(51, 13)
-        Me.InstallText.TabIndex = 22
-        Me.InstallText.Text = "Installtext"
-        '
         'Installer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadInstaller
         Me.ClientSize = New System.Drawing.Size(576, 346)
-        Me.Controls.Add(Me.InstallText)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox6)
@@ -226,5 +214,4 @@ Partial Class Installer
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
-    Friend WithEvents InstallText As System.Windows.Forms.Label
 End Class

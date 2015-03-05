@@ -49,8 +49,6 @@ Public Class Installer
         If Me.TextBox1.Text <> "Please select a directory for installation!" Then
             ' Picture Box einblenden '
             PictureBox7.Visible = True
-            ' Istall Text einblenden '
-            InstallText.Visible = True
             Label1.Visible = True
             Label3.Visible = True
             ' Browse Button und Text Box ausblenden '
@@ -78,14 +76,13 @@ Public Class Installer
     End Sub
 
     Private Sub zipper_zipProgressChange(ByVal sender As Object, ByVal e As SevenZip.ProgressEventArgs) Handles zipper.Extracting
-
+        PictureBox7.Width = 544
+        PictureBox7.Update()
         PictureBox8.Width = 544
         Me.PictureBox8.Width = e.PercentDone * 5.44
         PictureBox8.Update()
-        Console.WriteLine(e.PercentDone * 5.44)
         Me.Label3.Text = e.PercentDone & "%"
         Label3.Update()
-
     End Sub
 
     ' Back Button Hover '
@@ -164,7 +161,6 @@ Public Class Installer
         PictureBox7.Width = 0
         PictureBox8.Width = 0
         Label3.Visible = False
-        InstallText.Visible = False
         TextBox1.Visible = True
         ' Form 5 Schließen, da sie nicht mehr benötigt wird '
         Form5.Close()

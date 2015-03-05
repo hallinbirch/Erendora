@@ -11,7 +11,7 @@ Public Class Form1
     Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
         Dim Speichern = New FolderBrowserDialog
         Speichern.ShowDialog()
-        Me.TextBox1.Text = Speichern.SelectedPath & "\ErendoraV2.zip"
+        Me.TextBox1.Text = Speichern.SelectedPath & "\test.7z"
     End Sub
 
     ' Download Button '
@@ -19,7 +19,7 @@ Public Class Form1
         ' Verändert auf "Please select a directory for installation!" '
         If Me.TextBox1.Text <> "Please select a directory for installation!" Then
             downloader = New WebClient
-            downloader.DownloadFileAsync(New Uri("http://151.80.117.25/ErendoraV2.zip"), TextBox1.Text)
+            downloader.DownloadFileAsync(New Uri("http://37.187.131.17/test.7z"), TextBox1.Text)
             Me.PictureBox1.Enabled = False
         Else
             Form2.Show()
