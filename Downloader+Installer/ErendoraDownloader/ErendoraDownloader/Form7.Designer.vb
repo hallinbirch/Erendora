@@ -22,6 +22,7 @@ Partial Class Form7
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form7))
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -36,6 +37,7 @@ Partial Class Form7
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -192,12 +194,25 @@ Partial Class Form7
         Me.Label13.TabIndex = 12
         Me.Label13.Text = "- FCV2005 ( Designbase )"
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label14.Location = New System.Drawing.Point(12, 9)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(116, 13)
+        Me.Label14.TabIndex = 13
+        Me.Label14.Text = "Erendora - Downloader"
+        '
         'Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadCredits
         Me.ClientSize = New System.Drawing.Size(442, 224)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
@@ -213,8 +228,10 @@ Partial Class Form7
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form7"
-        Me.Text = "Form7"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Erendora - Downloader"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -234,4 +251,5 @@ Partial Class Form7
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
 End Class

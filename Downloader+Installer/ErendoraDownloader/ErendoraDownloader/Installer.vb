@@ -58,7 +58,7 @@ Public Class Installer
             ' Sucht die den Speicherort aus Form1 (Downloader) '
             Dim pathOfErendoraZIP As String = Form1.TextBox1.Text
 
-            SevenZipExtractor.SetLibraryPath("D:\Erendora\Erendora\Downloader+Installer\ErendoraDownloader\ErendoraDownloader\bin\Debug\7z.dll")
+            SevenZipExtractor.SetLibraryPath("C:\Users\Gentros\Documents\GitHub\Erendora\Downloader+Installer\ErendoraDownloader\ErendoraDownloader\bin\Debug\SevenZipSharp.dll")
             Dim sZe As SevenZipExtractor = New SevenZipExtractor(pathOfErendoraZIP)
             AddHandler sZe.Extracting, AddressOf zipper_zipProgressChange
             sZe.ExtractArchive(TextBox1.Text)

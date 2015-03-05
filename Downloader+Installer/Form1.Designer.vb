@@ -108,6 +108,7 @@ Partial Class Form1
         '
         'PictureBox5
         '
+        Me.PictureBox5.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloaderInfo
         resources.ApplyResources(Me.PictureBox5, "PictureBox5")
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.TabStop = False

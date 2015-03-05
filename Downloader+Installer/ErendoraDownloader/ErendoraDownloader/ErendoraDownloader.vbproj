@@ -89,8 +89,9 @@
     <Reference Include="Ionic.Zlib">
       <HintPath>..\Lib\Tools\Ionic.Zlib.dll</HintPath>
     </Reference>
-    <Reference Include="SevenZipSharp">
-      <HintPath>C:\Users\Paddy-Gaming\Downloads\SevenZipSharp.dll</HintPath>
+    <Reference Include="SevenZipSharp, Version=0.64.3890.29348, Culture=neutral, PublicKeyToken=20de82c62b055c88, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Downloads\SevenZipSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -149,12 +150,6 @@
       <DependentUpon>Form5.vb</DependentUpon>
     </Compile>
     <Compile Include="Form5.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form6.Designer.vb">
-      <DependentUpon>Form6.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form6.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form7.Designer.vb">
@@ -224,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Installer.resx">
       <DependentUpon>Installer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Installer2.resx">
+      <DependentUpon>Installer2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -340,6 +338,12 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="7-Zip.7-Zip.7-zip, Version=1.0.0.0, ProcessorArchitecture=%2a, Type=win32">
+      <Name>7-zip.dll</Name>
+      <HintPath>..\..\..\..\..\..\Desktop\7-zip.dll</HintPath>
+    </NativeReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

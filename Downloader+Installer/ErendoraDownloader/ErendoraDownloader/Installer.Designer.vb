@@ -22,6 +22,7 @@ Partial Class Installer
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Installer))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -108,7 +109,7 @@ Partial Class Installer
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(542, 275)
+        Me.Label3.Location = New System.Drawing.Point(536, 275)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(21, 13)
         Me.Label3.TabIndex = 18
@@ -150,7 +151,7 @@ Partial Class Installer
         '
         Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox7.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadProgessbar
-        Me.PictureBox7.Location = New System.Drawing.Point(20, 249)
+        Me.PictureBox7.Location = New System.Drawing.Point(15, 249)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(544, 23)
         Me.PictureBox7.TabIndex = 21
@@ -160,7 +161,7 @@ Partial Class Installer
         '
         Me.PictureBox8.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox8.BackgroundImage = Global.ErendoraDownloader.My.Resources.Resources.DownloadProgressHover
-        Me.PictureBox8.Location = New System.Drawing.Point(21, 249)
+        Me.PictureBox8.Location = New System.Drawing.Point(15, 249)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(544, 23)
         Me.PictureBox8.TabIndex = 21
@@ -186,6 +187,7 @@ Partial Class Installer
         Me.Controls.Add(Me.PictureBox1)
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Installer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Installer"
