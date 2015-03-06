@@ -5,7 +5,7 @@ Imports System.Net
 Imports SevenZip
 
 Public Class Installer
-    ' Deklaationen die benötigt werden ' 
+    ' Deklarationen die benötigt werden ' 
     Public WithEvents zipper As SevenZip.SevenZipExtractor
     Dim Zip As String
     Dim Ordner As String
